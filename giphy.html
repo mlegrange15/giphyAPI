@@ -5,25 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Giphy API</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Link to Bootstrap-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
 
     <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
     
 </head>
 <body>
-
-  <div id = "button-div"> </div>
-
-  <form class="form-inline" id="search">
-      <div class="form-group">
-        <label>Add a new sport</label>
-        <input type="text" id="inputText">
+    <div class="jumbotron jumbotron-fluid bg-dark text-white">
+        <div class="container">
+          <h1 class="display-4">Gettin' Giphy</h1>
+          <p class="lead">Click the buttons below to see gifs for each sport. Click the gifs that populate to turn them on and off.
+            Don't see the sport you want? Add it with the submit form.
+          </p>
+        </div>
       </div>
-        <input id="inputButton" type="submit" value="submit">
-    </form>
 
-  <div id = "gif-div"> </div>
+  <div class="container">
+
+    <div class="row bg-dark">
+      <div class="col-md-12">
+        <div id = "button-div" class="form-inline mr-5 p-3"> </div>
+      </div>
+    </div>
+
+    <div class="row bg-dark text-white">
+      <div class="col-md-12">
+        <form class="form-inline" id="search">
+          <div class="form-group m-4">
+            <label class="mr-3">Add a new sport: </label>
+              <input type="text" id="inputText">
+          </div>
+              <input id="inputButton" type="submit" value="submit">
+        </form>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-md-12">
+        <div id = "gif-div"> </div>
+      </div>
+    </div>
+
+  </div>
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

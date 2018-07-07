@@ -9,7 +9,7 @@ makeThoseButtons = function(){
 
         var buttonDiv = $("<div>");
 
-        var buttons = $("<button>" + topics[i] + "</button>");
+        var buttons = $("<button class= mr-2>" + topics[i] + "</button>");
 
         buttons.attr("value",topics[i]);
 
@@ -36,7 +36,7 @@ makeThoseButtons = function(){
 
             for (var i = 0; i < results.length; i++) {
 
-                var gifsDiv = $("<div>");
+                var gifsDiv = $("<div class= border border-dark>");
                 var ratings = $("<p>").text("Rating: " + results[i].rating);
                 var animateImage = results[i].images.fixed_height.url;
                 var stillImage = results[i].images.fixed_height_still.url;
@@ -89,7 +89,7 @@ makeThoseButtons();
 
        var add = $("#inputText").val().trim();
         topics.push(add);
-        // makeThoseNewButtons();
+        $("#inputText").val("")
         makeThoseButtons();
      
  
