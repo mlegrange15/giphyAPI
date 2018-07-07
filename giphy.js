@@ -1,7 +1,9 @@
 var apiKey = "eiinnu4DHoCE1CyfhStRagE1zztqB0XS";
-var topics = ["baseball","football","basketball","soccer","tennis","golf",];
+var topics = ["baseball","football","basketball","soccer","tennis","golf"];
 
 makeThoseButtons = function(){
+
+    $("#button-div").empty();
 
     for (i=0; i < topics.length; i++){
 
@@ -16,7 +18,6 @@ makeThoseButtons = function(){
         $("#button-div").append(buttonDiv);
     
     }
-
 
     $("button").on("click", function(event) {
         event.preventDefault();
@@ -83,23 +84,12 @@ makeThoseButtons = function(){
 makeThoseButtons();
 
 
-
-    makeThoseNewButtons = function(){
-       
-        var add = $("#inputText").val().trim();
-
-        var addButtons = $("<button>" + add + "</button>");
-
-        addButtons.attr("value", add);
-
-        $("#button-div").append(addButtons);
-    
-    }
-
     $("#inputButton").on("click", function(event) {
-        
         event.preventDefault();
-        makeThoseNewButtons();
+
+       var add = $("#inputText").val().trim();
+        topics.push(add);
+        // makeThoseNewButtons();
         makeThoseButtons();
      
  
